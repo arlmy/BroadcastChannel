@@ -163,7 +163,7 @@ function getPost($, item, { channel, staticProxy, index = 0 }) {
       if (p2 === '//') {
         p2 = 'https://'
       }
-      if (p2?.startsWith('t.me')) {
+      if (p2?.startsWith('telegram.me')) {
         return false
       }
       return `${p1}${staticProxy}${p2}`
@@ -183,7 +183,7 @@ export async function getChannelInfo(Astro, { before = '', after = '', q = '', t
   }
 
   // Where t.me can also be telegram.me, telegram.dog
-  const host = getEnv(import.meta.env, Astro, 'TELEGRAM_HOST') ?? 't.me'
+  const host = getEnv(import.meta.env, Astro, 'TELEGRAM_HOST') ?? 'telegram.me'
   const channel = getEnv(import.meta.env, Astro, 'CHANNEL')
   const staticProxy = getEnv(import.meta.env, Astro, 'STATIC_PROXY') ?? '/static/'
 
