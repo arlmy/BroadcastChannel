@@ -69,8 +69,8 @@ const staticProxy = getEnv(import.meta.env, Astro, 'STATIC_PROXY') ?? '/static/'
 
     {
       TELEGRAM && TELEGRAM.length > 0 && (
-        <a href={`https://t.me/${TELEGRAM}`} title="Telegram" target="_blank">
-          <img {...telegram} alt={`t.me/${TELEGRAM}`} class="social-icon" width="1em" />
+        <a href={`https://telegram.me/${TELEGRAM}`} title="Telegram" target="_blank">
+          <img {...telegram} alt={`telegram.me/${TELEGRAM}`} class="social-icon" width="1em" />
         </a>
       )
     }
